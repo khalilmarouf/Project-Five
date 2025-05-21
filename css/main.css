@@ -2,6 +2,10 @@ body {
     background-color: rgb(235, 240, 245);
     user-select: none;
 }
+img {
+    background-color: #eee;
+    border-radius: 50%;
+}
 .navbar-toggler {
     transition: .3s ;
 }
