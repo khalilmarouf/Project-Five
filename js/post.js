@@ -73,7 +73,7 @@ function loadPost(data, comments) {
                         src="${
                             typeof data.author.profile_image == "string"
                                 ? data.author.profile_image
-                                : "../images/unknown-user.png"
+                                : "./images/unknown-user.png"
                         }"
                         class="me-2 img-fluid rounded-circle profileImg"
                     />
@@ -164,7 +164,7 @@ function loadComments(comments) {
         let commentProfilePhoto =
             typeof comment.author.profile_image == "string"
                 ? comment.author.profile_image
-                : "../images/unknown-user.png";
+                : "./images/unknown-user.png";
         let baseComments = `
             <!-- comment -->
             <div

@@ -37,7 +37,7 @@ function getUserData(userID) {
 function buildHeaderPage(userData) {
     userImg = "";
     if(typeof userData.profile_image != 'string') {
-        userImg = "../images/unknown-user.png"
+        userImg = "./images/unknown-user.png"
     } else {
         userImg = userData.profile_image;
     }

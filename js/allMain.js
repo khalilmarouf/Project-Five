@@ -119,7 +119,7 @@ function setupUserNameAndPhoto() {
     profilePhoto.src =
         typeof user.profile_image == "string"
             ? user.profile_image
-            : "../images/unknown-user.png";
+            : "./images/unknown-user.png";
 
     usernameSpan.appendChild(profilePhoto);
     document.querySelector(".username-text").innerHTML = "";
@@ -425,7 +425,7 @@ function printAllPosts(firstLoad, posts, userID = null) {
                         src="${
                             typeof post.author.profile_image == "string"
                                 ? post.author.profile_image
-                                : "../images/unknown-user.png"
+                                : "./images/unknown-user.png"
                         }"
                         class="me-2 img-fluid rounded-circle"
                     />
@@ -489,7 +489,7 @@ function prepareCardBody() {
         cardBody.addEventListener("click", (e) => {
             if (cardBody === e.target.parentElement) {
                 let postID = cardBody.parentElement.dataset.postid;
-                window.location.href = `../post.html?postid=${postID}`;
+                window.location.href = `./post.html?postid=${postID}`;
             }
         });
     });
@@ -527,7 +527,7 @@ function getAllPosts(firstLoad = false, userID = null) {
     }
 }
 function goToUserProfile(id) {
-    window.location = `../profile.html?userid=${id}`;
+    window.location = `./profile.html?userid=${id}`;
 }
 function prepareComments() {
     document
@@ -568,7 +568,7 @@ function getPostComments(clickedCommentSection, postID) {
             let commentProfilePhoto =
                 typeof comment.author.profile_image == "string"
                     ? comment.author.profile_image
-                    : "../images/unknown-user.png";
+                    : "./images/unknown-user.png";
             clickedCommentSection.innerHTML += `
                 <div class="comment d-flex gap-1 ms-3 pb-2 pt-2 " style="${
                     comment !== comments[comments.length - 1]
