@@ -13,11 +13,13 @@ window.addEventListener("DOMContentLoaded", () => {
     
     getUserData(userID);
     getUserPosts(userID);
-    if(userID === user.id) {
-        document.querySelectorAll(".nav-bar-pages-nav li a").forEach(li => {
-            li.classList.remove("active");
-        })
-        document.querySelector(".nav-bar-pages-profile").classList.add("active");
+    if(user != null) {
+        if(userID === user.id) {
+            document.querySelectorAll(".nav-bar-pages-nav li a").forEach(li => {
+                li.classList.remove("active");
+            })
+            document.querySelector(".nav-bar-pages-profile").classList.add("active");
+        }
     }
 });
 
