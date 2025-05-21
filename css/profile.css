@@ -1,0 +1,22 @@
+@media (max-width: 767px) {
+    .user-info {
+        display: flex;
+        justify-content: space-evenly !important;
+        > * {
+            width: fit-content;
+        }
+        span {
+            margin: 0 !important;
+        }
+    }
+    .user-last-data {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around !important;
+        > * {
+            margin-left: 15px !important;
+            width: fit-content;
+        }
+    }
+}
+
